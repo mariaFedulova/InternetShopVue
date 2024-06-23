@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    &__search-button,
+    &__cart-button {
+        border: 1px solid $dark-marine-color;
+        border-radius: 10px;
+        padding: 10px 15px;
+        color: $dark-marine-color;
+        background-color: $white-color;
+
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

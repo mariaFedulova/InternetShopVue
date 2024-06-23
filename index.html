@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NodeJS</title>
+        <script
+            src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+        <script src="./dist/build.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="container">
+                <header class="header">
+                    <search-block :searchLine="searchLine" @click-search="filterGoods"></search-block>
+                    <button class="header__cart-button" type="button">Корзина</button>
+                </header>
+                <main>
+                    <goods-list :goods="filteredGoods"></goods-list>
+                    <empty-goods-list :goods="filteredGoods"></empty-goods-list>
+                    <cart-list :isvisiblecart="isVisibleCart" :cartgoods="cartGoods"></cart-list>
+                </main>
+            </div>
+            
+        </div>
+    </body>
+</html>
