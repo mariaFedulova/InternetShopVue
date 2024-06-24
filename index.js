@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const moment = require('moment');
 const fs = require('fs');
+const path = require('path');
 const app = express();
 
 app.listen('3000', () => {
@@ -12,6 +13,14 @@ app.listen('3000', () => {
 app.use(express.static('.'));
 app.use(bodyParser.json({ extended: false }));
 app.use(cors());
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'html', 'index.html'));
+});
+
+app.get('/cart', (req, res) => {
+    res.sendFile(path.join(__dirname, 'html', 'cart.html'));
+});
 
 app.get('/catalogData', (req, res) => {
     fs.readFile('./json/data.json', 'utf-8', (err, data) => {

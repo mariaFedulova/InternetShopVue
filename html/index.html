@@ -16,15 +16,14 @@
             <div class="container">
                 <header class="header">
                     <search-block :searchLine="searchLine" @click-search="filterGoods"></search-block>
-                    <button class="header__cart-button" type="button">Корзина</button>
+                    <a class="header__cart-button" href="/cart">Корзина</a>
                 </header>
                 <main>
                     <goods-list :goods="filteredGoods"></goods-list>
                     <empty-goods-list :goods="filteredGoods"></empty-goods-list>
-                    <cart-list :isvisiblecart="isVisibleCart" :cartgoods="cartGoods"></cart-list>
                 </main>
             </div>
-            
+            <footer-block></footer-block>
         </div>
     </body>
 </html>

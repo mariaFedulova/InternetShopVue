@@ -1,12 +1,13 @@
 const API_URL = "http://localhost:3000";
 const goodsItem = Vue.component('goods-item', {
     props: ['item'],
-    template: `<div>
-                    <h3 class="products__card-header">{{item.title}}</h3>
-                    <p class="products__card-text">{{item.descr}}</p>
-                    <p class="products__card-price">$ {{ item.price }}</p>
-                    <button type="button" @click=addToCart>Add To Cart</button>
-                </div>`,
+    template: `<section class="goods__item">
+                    <img class="goods__img" :src="item['img']" :alt="item['title']" width="80%">
+                    <h3 class="goods__card-header">{{item.title}}</h3>
+                    <p class="goods__card-text">{{item.descr}}</p>
+                    <p class="goods__card-price">$ {{ item.price }}</p>
+                    <button class="goods__add-to-cart-button" type="button" @click=addToCart>Add To Cart</button>
+                </section>`,
     methods: {
         async addToCart() {
             const responce = await fetch(`${API_URL}/addToCart`, {
