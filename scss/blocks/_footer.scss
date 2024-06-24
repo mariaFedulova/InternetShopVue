@@ -1,0 +1,22 @@
+.footer {
+    background-color: $white-color;
+    min-height: 100px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0 0 0;
+    }
+
+    &__contacts {
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+    }
+
+    &__links {
+        display: flex;
+        width: 16%;
+        justify-content: space-between;
+    }
+}

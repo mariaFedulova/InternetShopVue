@@ -4,6 +4,7 @@ import emptyGoodsList from './js/components/emptyGoodsList';
 import cartItem from './js/components/cartItem';
 import cartList from './js/components/cartList';
 import searchBlock from './js/components/searchBlock';
+import footer from './js/components/footer';
 
 const init = () => {
     const API_URL = "http://localhost:3000";
